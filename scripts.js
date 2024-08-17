@@ -23,4 +23,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     shoeImage.src = 'images/redandwhite.jpeg'; // Revert to original image
                     shoeDescription.textContent = 'This is a stylish shoe for all occasions.';
                 }
-            });
+                document.addEventListener('DOMContentLoaded', () => {
+                    const shoeImage = document.getElementById('shoeImage');
+                    const changeShoeButton = document.getElementById('changeShoeButton');
+                    
+                    let shoeIndex = 1;
+                    const totalShoes = 2; // Number of different shoe images available
+                
+                    changeShoeButton.addEventListener('click', () => {
+                        shoeIndex = (shoeIndex % totalShoes) + 1;
+                        shoeImage.src = `shoe${shoeIndex}.jpg`;
+                        shoeImage.alt = `Shoe ${shoeIndex}`;
+                        
+                        const descriptions = [
+                            'This is a stylish shoe for all occasions.',
+                            'This is a trendy shoe for modern fashion.'
+                        ];
+                        
+                        document.getElementById('shoeDescription').innerText = descriptions[shoeIndex - 1];
+                    });
+                });

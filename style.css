@@ -1,0 +1,95 @@
+@import url(<script src="https://kit.fontawesome.com/7d261c2052.js" crossorigin="anonymous"></script>);
+*{
+    font-family: Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+}
+.header{
+    width:96%;
+    position:fixed;
+    top: 1.5rem; left: 50%;
+    transform: translateX(-50%)
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0,1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5rem;
+    background: #fff;
+}
+.navbar {
+    background-color: #333; /* Background color of the nav bar */
+    padding: 10px 20px; /* Padding around the nav bar */
+}
+
+.nav-menu {
+    list-style: none; /* Remove bullet points from list */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center the nav items */
+}
+
+.nav-item {
+    margin: 0 15px; /* Spacing between nav items */
+}
+
+.nav-link {
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(234, 226, 226); /* Link text color */
+    font-size: 16px; /* Font size */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.nav-link:hover {
+    color: #f0a; /* Color on hover */
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Image styling */
+#shoeImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+#changeShoeButton {
+    background-color: #007BFF; /* Blue background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#changeShoeButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Paragraph styling */
+#shoeDescription {
+    font-size: 16px;
+    color: #333;
+}

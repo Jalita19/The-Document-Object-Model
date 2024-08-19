@@ -70,7 +70,9 @@ header {
 .fas.fa-search {
     margin-left: 5px;
 }
-
+.button-container {
+    text-align: center;
+}
 /* Image container styles */
 .image-container {
     display: flex;
@@ -227,3 +229,44 @@ header {
 
 .highlight {
     background-color: yellow;
+}
+    
+
+.animated-button {
+        background-color: #3498db;
+        border: none;
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.4s, transform 0.4s;
+    }
+    
+    .animated-button::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.3);
+        transition: transform 0.4s;
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    
+    .animated-button:hover::before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .animated-button:hover {
+        background-color: #2980b9;
+        transform: scale(1.1);

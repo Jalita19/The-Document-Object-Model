@@ -30,28 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Toggle header animations
-    const header = document.getElementById('header');
-    const toggleButton = document.getElementById('toggleAnimation');
     
-    document.addEventListener('DOMContentLoladed', () => {
-        const toggleButton = document.getElementById('toggleAnimation');
-        const animatedElement = document.querySelector('header');
-    
-        toggleButton.addEventListener('click', () => {
-            if (animatedElement.classList.contains('slide-in')) {
-                animatedElement.classList.remove('slide-in');
-                animatedElement.classList.add('slide-out');
-            } else {
-                animatedElement.classList.remove('slide-out');
-                animatedElement.classList.add('slide-in');
-            }
-        });
-    });
 
     // Change shoe display text
-    const shoeDisplay = document.getElementById('shoeDisplay');
-    const shoeNames = ['Sneakers', 'Boots', 'Sandals', 'Loafers'];
+    const shoeDisplay = document.getElementById('.shoeDisplay');
+    const shoeNames = ['Sneakers', 'Boots', 'Sandals', 'Sports'];
     let currentIndex = 0;
 
     changeShoeButton.addEventListener('click', () => {
@@ -60,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // DOM navigation and manipulation
-    const item1 = document.getElementById('item1');
+    const item1 = document.getElementById('.item1');
     const container = item1.parentNode; // .parentNode returns the <div class="container">
 
     // Log various navigation results
@@ -71,16 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Previous sibling of item2:', item1.nextElementSibling.previousElementSibling);
 
     // Change text content
-    const box = document.getElementById('box');
-    const changeTextButton = document.getElementById('changeText');
+    const box = document.getElementById('.box');
+    const changeTextButton = document.getElementById('.changeText');
 
     changeTextButton.addEventListener('click', () => {
         box.textContent = 'This is the updated text content!';
     });
 
     // Change image source
-    const img = document.getElementById('myImage');
-    const changeImageButton = document.getElementById('changeImage');
+    const img = document.getElementById('.myImage');
+    const changeImageButton = document.getElementById('.changeImage');
 
     changeImageButton.addEventListener('click', () => {
         img.setAttribute('src', 'https://www.nike.com');
@@ -88,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add new paragraph
-    const contentDiv = document.getElementById('content');
-    const addParagraphButton = document.getElementById('addParagraph');
+    const contentDiv = document.getElementById('.content');
+    const addParagraphButton = document.getElementById('.addParagraph');
 
     addParagraphButton.addEventListener('click', () => {
         const newParagraph = document.createElement('p');
@@ -100,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add list items using DocumentFragment
-    const itemList = document.getElementById('itemList');
-    const addItemsButton = document.getElementById('addItems');
+    const itemList = document.getElementById('.itemList');
+    const addItemsButton = document.getElementById('.addItems');
 
     addItemsButton.addEventListener('click', () => {
         const fragment = document.createDocumentFragment();
@@ -114,11 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Form validation
-    const form = document.getElementById('myForm');
-    const usernameInput = document.getElementById('username');
-    const emailInput = document.getElementById('email');
-    const usernameError = document.getElementById('usernameError');
-    const emailError = document.getElementById('emailError');
+    const form = document.getElementById('.myForm');
+    const usernameInput = document.getElementById('.username');
+    const emailInput = document.getElementById('.email');
+    const usernameError = document.getElementById('.usernameError');
+    const emailError = document.getElementById('.emailError');
 
     form.addEventListener('submit', (event) => {
         let isValid = true;
@@ -142,13 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Navigation and highlighting
-    const navigateButton = document.getElementById('navigate');
-    const parentDiv = document.getElementById('parent');
+    const navigateButton = document.getElementById('.navigate');
+    const parentDiv = document.getElementById('.parent');
 
     navigateButton.ad
 });
 document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('addHighlight');
+    const button = document.getElementById('.addHighlight');
     button.addEventListener('click', () => {
         const items = document.querySelectorAll('.item');
         items.forEach(item => {
@@ -157,5 +140,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+    // Toggle header animations
+    const header = document.getElementById('header');
+    const toggleButton = document.getElementById('.toggleAnimation');
+    
+    document.addEventListener('DOMContentLoladed', () => {
+        const toggleButton = document.getElementById('.toggleAnimation');
+        const animatedElement = document.querySelector('header');
+    
+        toggleButton.addEventListener('click', () => {
+            if (animatedElement.classList.contains('slide-in')) {
+                animatedElement.classList.remove('slide-in');
+                animatedElement.classList.add('slide-out');
+            } else {
+                animatedElement.classList.remove('slide-out');
+                animatedElement.classList.add('slide-in');
+            }
+        });
+    });
 
 
